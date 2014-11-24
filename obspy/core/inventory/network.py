@@ -365,19 +365,19 @@ class Network(BaseNode):
         :type water_fill_color: Valid matplotlib color, optional
         :param water_fill_color: Color of all water bodies.
             Defaults to ``"white"``.
-        :type marker: str
+        :type marker: str, optional
         :param marker: Marker symbol (see :func:`matplotlib.pyplot.scatter`).
-        :type label: bool
+        :type label: bool, optional
         :param label: Whether to label stations with "network.station" or not.
-        :type color: str
+        :type color: str, optional
         :param color: Face color of marker symbol (see
             :func:`matplotlib.pyplot.scatter`).
-        :type time: :class:`~obspy.core.utcdatetime.UTCDateTime`
+        :type time: :class:`~obspy.core.utcdatetime.UTCDateTime`, optional
         :param time: Only plot stations available at given point in time.
-        :type show: bool
+        :type show: bool, optional
         :param show: Whether to show the figure after plotting or not. Can be
             used to do further customization of the plot before showing it.
-        :type outfile: str
+        :type outfile: str, optional
         :param outfile: Output file path to directly save the resulting image
             (e.g. ``"/tmp/image.png"``). Overrides the ``show`` option, image
             will not be displayed interactively. The given path/file name is

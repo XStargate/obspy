@@ -307,7 +307,7 @@ class Channel(BaseNode):
 
         :type min_freq: float
         :param min_freq: Lowest frequency to plot.
-        :type output: str
+        :type output: str, optional
         :param output: Output units. One of:
 
             ``"DISP"``
@@ -323,17 +323,17 @@ class Channel(BaseNode):
         :type end_stage: int
         :param end_stage: Sequence number of last stage that will be used
             (disregarding all later stages).
-        :type label: str
+        :type label: str, optional
         :param label: Label string for legend.
-        :type axes: list of 2 :class:`matplotlib.axes.Axes`
+        :type axes: list of 2 :class:`matplotlib.axes.Axes`, optional
         :param axes: List/tuple of two axes instances on which to plot the
             amplitude/phase spectrum. If not specified, a new figure is opened.
-        :type unwrap_phase: bool
+        :type unwrap_phase: bool, optional
         :param unwrap_phase: Set optional phase unwrapping using NumPy.
-        :type show: bool
+        :type show: bool, optional
         :param show: Whether to show the figure after plotting or not. Can be
             used to do further customization of the plot before showing it.
-        :type outfile: str
+        :type outfile: str, optional
         :param outfile: Output file path to directly save the resulting image
             (e.g. ``"/tmp/image.png"``). Overrides the ``show`` option; image
             will not be displayed interactively. The given path/file name is

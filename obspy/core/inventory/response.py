@@ -1154,7 +1154,7 @@ class Response(ComparingObject):
 
         :type min_freq: float
         :param min_freq: Lowest frequency to plot.
-        :type output: str
+        :type output: str, optional
         :param output: Output units. One of:
 
                 ``"DISP"``
@@ -1170,24 +1170,24 @@ class Response(ComparingObject):
         :type end_stage: int, optional
         :param end_stage: Stage sequence number of last stage that will be
             used (disregarding all later stages).
-        :type label: str
+        :type label: str, optional
         :param label: Label string for legend.
-        :type axes: list of 2 :class:`matplotlib.axes.Axes`
+        :type axes: list of 2 :class:`matplotlib.axes.Axes`, optional
         :param axes: List/tuple of two axes instances to plot the
             amplitude/phase spectrum into. If not specified, a new figure is
             opened.
-        :type sampling_rate: float
+        :type sampling_rate: float, optional
         :param sampling_rate: Manually specify sampling rate of time series.
             If not given it is attempted to determine it from the information
             in the individual response stages.  Does not influence the spectra
             calculation, if it is not known, just provide the highest frequency
             that should be plotted times two.
-        :type unwrap_phase: bool
+        :type unwrap_phase: bool, optional
         :param unwrap_phase: Set optional phase unwrapping using NumPy.
-        :type show: bool
+        :type show: bool, optional
         :param show: Whether to show the figure after plotting or not. Can be
             used to do further customization of the plot before showing it.
-        :type outfile: str
+        :type outfile: str, optional
         :param outfile: Output file path to directly save the resulting image
             (e.g. ``"/tmp/image.png"``). Overrides the ``show`` option, image
             will not be displayed interactively. The given path/filename is

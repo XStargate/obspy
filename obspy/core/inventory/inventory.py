@@ -445,16 +445,16 @@ class Inventory(ComparingObject):
         :type water_fill_color: Valid matplotlib color, optional
         :param water_fill_color: Color of all water bodies.
             Defaults to ``"white"``.
-        :type marker: str
+        :type marker: str, optional
         :param marker: Marker symbol (see :func:`matplotlib.pyplot.scatter`).
-        :type size: float
+        :type size: float, optional
         :param size: Marker size (see :func:`matplotlib.pyplot.scatter`).
-        :type label: bool
+        :type label: bool, optional
         :param label: Whether to label stations with "network.station" or not.
-        :type color: str
+        :type color: str, optional
         :param color: Face color of marker symbol (see
             :func:`matplotlib.pyplot.scatter`).
-        :type color_per_network: bool or dict
+        :type color_per_network: bool or dict, optional
         :param color_per_network: If set to ``True``, each network will be
             drawn in a different color. A dictionary can be provided that maps
             network codes to color values (e.g.
@@ -463,17 +463,17 @@ class Inventory(ComparingObject):
         :param colormap: Only used if ``color_per_network=True``. Specifies
             which colormap is used to draw the colors for the individual
             networks.
-        :type legend: str or None
+        :type legend: str or None, optional
         :param legend: Location string for legend, if networks are plotted in
             different colors (i.e. option ``color_per_network`` in use). See
             :func:`matplotlib.pyplot.legend` for possible values for
             legend location string. To disable legend set to ``None``.
-        :type time: :class:`~obspy.core.utcdatetime.UTCDateTime`
+        :type time: :class:`~obspy.core.utcdatetime.UTCDateTime`, optional
         :param time: Only plot stations available at given point in time.
-        :type show: bool
+        :type show: bool, optional
         :param show: Whether to show the figure after plotting or not. Can be
             used to do further customization of the plot before showing it.
-        :type outfile: str
+        :type outfile: str, optional
         :param outfile: Output file path to directly save the resulting image
             (e.g. ``"/tmp/image.png"``). Overrides the ``show`` option, image
             will not be displayed interactively. The given path/file name is

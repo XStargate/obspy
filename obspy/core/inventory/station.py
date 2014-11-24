@@ -366,7 +366,7 @@ class Station(BaseNode):
 
         :type min_freq: float
         :param min_freq: Lowest frequency to plot.
-        :type output: str
+        :type output: str, optional
         :param output: Output units. One of:
 
                 ``"DISP"``
@@ -376,31 +376,31 @@ class Station(BaseNode):
                 ``"ACC"``
                     acceleration, output unit is meters/second**2
 
-        :type location: str
+        :type location: str, optional
         :param location: Only plot matching channels. Accepts UNIX style
             patterns and wildcards (e.g. ``"BH*"``, ``"BH?"``, ``"*Z"``,
             ``"[LB]HZ"``; see :func:`~fnmatch.fnmatch`)
-        :type channel: str
+        :type channel: str, optional
         :param channel: Only plot matching channels. Accepts UNIX style
             patterns and wildcards (e.g. ``"BH*"``, ``"BH?"``, ``"*Z"``,
             ``"[LB]HZ"``; see :func:`~fnmatch.fnmatch`)
         :param time: Only show channels active at given point in time.
-        :type starttime: :class:`~obspy.core.utcdatetime.UTCDateTime`
+        :type starttime: :class:`~obspy.core.utcdatetime.UTCDateTime`, optional
         :param starttime: Only show channels active at or after given point in
             time (i.e. channels ending before given time will not be shown).
-        :type endtime: :class:`~obspy.core.utcdatetime.UTCDateTime`
+        :type endtime: :class:`~obspy.core.utcdatetime.UTCDateTime`, optional
         :param endtime: Only show channels active before or at given point in
             time (i.e. channels starting after given time will not be shown).
-        :type axes: list of 2 :class:`matplotlib.axes.Axes`
+        :type axes: list of 2 :class:`matplotlib.axes.Axes`, optional
         :param axes: List/tuple of two axes instances to plot the
             amplitude/phase spectrum into. If not specified, a new figure is
             opened.
-        :type unwrap_phase: bool
+        :type unwrap_phase: bool, optional
         :param unwrap_phase: Set optional phase unwrapping using NumPy.
-        :type show: bool
+        :type show: bool, optional
         :param show: Whether to show the figure after plotting or not. Can be
             used to do further customization of the plot before showing it.
-        :type outfile: str
+        :type outfile: str, optional
         :param outfile: Output file path to directly save the resulting image
             (e.g. ``"/tmp/image.png"``). Overrides the ``show`` option, image
             will not be displayed interactively. The given path/file name is
