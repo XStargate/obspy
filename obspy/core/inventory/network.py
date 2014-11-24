@@ -335,7 +335,7 @@ class Network(BaseNode):
 
     def plot(self, projection='global', resolution='l',
              continent_fill_color='0.9', water_fill_color='1.0', marker="v",
-             size=15**2, label=True, color='blue', time=None, show=True,
+             size=15**2, label=True, color='#b15928', time=None, show=True,
              outfile=None, method=None, **kwargs):  # @UnusedVariable
         """
         Creates a preview map of all stations in current network object.
@@ -371,7 +371,8 @@ class Network(BaseNode):
         :param label: Whether to label stations with "network.station" or not.
         :type color: str, optional
         :param color: Face color of marker symbol (see
-            :func:`matplotlib.pyplot.scatter`).
+            :func:`matplotlib.pyplot.scatter`). Defaults to the first color
+            from the single-element "Paired" color map.
         :type time: :class:`~obspy.core.utcdatetime.UTCDateTime`, optional
         :param time: Only plot stations available at given point in time.
         :type show: bool, optional
