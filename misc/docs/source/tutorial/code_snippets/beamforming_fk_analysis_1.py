@@ -90,7 +90,7 @@ fig = plt.figure()
 for i, lab in enumerate(labels):
     ax = fig.add_subplot(4, 1, i + 1)
     ax.scatter(out[:, 0], out[:, i + 1], c=out[:, 1], alpha=0.6,
-               edgecolors='none')
+               edgecolors='none', cmap='YlGnBu_r')
     ax.set_ylabel(lab)
     ax.set_xlim(out[0, 0], out[-1, 0])
     ax.set_ylim(out[:, i + 1].min(), out[:, i + 1].max())

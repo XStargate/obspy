@@ -22,7 +22,7 @@ x, y = np.meshgrid(
     t,
     np.logspace(np.log10(f_min), np.log10(f_max), scalogram.shape[0]))
 
-ax.pcolormesh(x, y, np.abs(scalogram))
+ax.pcolormesh(x, y, np.abs(scalogram), cmap='YlGnBu_r')
 ax.set_xlabel("Time after %s [s]" % tr.stats.starttime)
 ax.set_ylabel("Frequency [Hz]")
 ax.set_yscale('log')

@@ -25,7 +25,7 @@ transff = array_transff_wavenumber(coords, klim, kstep, coordsys='xy')
 # plot
 plt.pcolor(np.arange(kxmin, kxmax + kstep * 1.1, kstep) - kstep / 2.,
            np.arange(kymin, kymax + kstep * 1.1, kstep) - kstep / 2.,
-           transff.T)
+           transff.T, cmap='YlGnBu_r')
 
 plt.colorbar()
 plt.clim(vmin=0., vmax=1.)

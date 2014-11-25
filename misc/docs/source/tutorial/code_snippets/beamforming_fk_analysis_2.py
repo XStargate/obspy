@@ -86,7 +86,7 @@ out = array_processing(st, **kwargs)
 
 # Plot
 
-cmap = cm.hot_r
+cmap = cm.YlGnBu_r
 
 # make output human readable, adjust backazimuth to values between 0 and 360
 t, rel_power, abs_power, baz, slow = out.T
@@ -127,6 +127,7 @@ ax.set_xticklabels(['N', 'E', 'S', 'W'])
 
 # set slowness limits
 ax.set_ylim(0, 3)
+[i.set_color('grey') for i in ax.get_yticklabels()]
 ColorbarBase(cax, cmap=cmap,
              norm=Normalize(vmin=hist.min(), vmax=hist.max()))
 

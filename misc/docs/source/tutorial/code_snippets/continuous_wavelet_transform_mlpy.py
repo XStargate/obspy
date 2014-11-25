@@ -25,7 +25,7 @@ t = np.arange(tr.stats.npts) / tr.stats.sampling_rate
 ax1.plot(t, tr.data, 'k')
 
 img = ax2.imshow(np.abs(spec), extent=[t[0], t[-1], freq[-1], freq[0]],
-                 aspect='auto', interpolation="nearest")
+                 aspect='auto', interpolation='nearest', cmap='YlGnBu_r')
 # Hackish way to overlay a logarithmic scale over a linearly scaled image.
 twin_ax = ax2.twinx()
 twin_ax.set_yscale('log')
