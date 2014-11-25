@@ -52,7 +52,7 @@ def _nearest_pow_2(x):
 
 def spectrogram(data, samp_rate, per_lap=0.9, wlen=None, log=False,
                 outfile=None, fmt=None, axes=None, dbscale=False,
-                mult=8.0, cmap=None, zorder=None, title=None, show=True,
+                mult=8.0, cmap='YlGnBu_r', zorder=None, title=None, show=True,
                 sphinx=False, clip=[0.0, 1.0]):
     """
     Computes and plots spectrogram of the input data.
@@ -84,7 +84,8 @@ def spectrogram(data, samp_rate, per_lap=0.9, wlen=None, log=False,
     :param mult: Pad zeros to length mult * wlen. This will make the
         spectrogram smoother.
     :type cmap: :class:`matplotlib.colors.Colormap`
-    :param cmap: Specify a custom colormap instance
+    :param cmap: Specify a custom colormap instance. If not specified, then the
+        YlGnBu_r colormap is used.
     :type zorder: float
     :param zorder: Specify the zorder of the plot. Only of importance if other
         plots in the same axes are executed.
