@@ -3358,7 +3358,7 @@ class Catalog(object):
 
         # Create the colormap for date based plotting.
         if colormap is None:
-            colormap = plt.get_cmap("RdYlGn_r")
+            colormap = plt.get_cmap("YlGnBu_r")
 
         if len(lons) > 1:
             title = (

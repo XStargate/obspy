@@ -466,7 +466,7 @@ class CatalogBasemapTestCase(unittest.TestCase):
         with ImageComparison(self.image_dir, 'catalog-basemap2.png') as ic:
             rcParams['savefig.dpi'] = 72
             cat.plot(method='basemap', outfile=ic.name, projection='ortho',
-                     resolution='c', water_fill_color='b', label=None)
+                     resolution='c', water_fill_color='#98b7e2', label=None)
 
     def test_catalog_plot_local(self):
         """
@@ -519,7 +519,7 @@ class CatalogCartopyTestCase(unittest.TestCase):
         with ImageComparison(self.image_dir, 'catalog-cartopy2.png') as ic:
             rcParams['savefig.dpi'] = 72
             cat.plot(method='cartopy', outfile=ic.name, projection='ortho',
-                     resolution='c', water_fill_color='b', label=None)
+                     resolution='c', water_fill_color='#98b7e2', label=None)
 
     def test_catalog_plot_local(self):
         """
