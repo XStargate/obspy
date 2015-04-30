@@ -24,6 +24,7 @@ from future.builtins import *  # NOQA
 
 import numpy as np
 
+from obspy.imaging.cm import obspy_sequential
 from obspy.signal import util
 
 
@@ -1123,7 +1124,7 @@ def plot_tf_gofs(st1, st2, dt=0.01, t0=0., fmin=1., fmax=10., nf=100, w0=6,
                  norm='global', st2_isref=True, A=10., k=1., left=0.1,
                  bottom=0.1, h_1=0.2, h_2=0.125, h_3=0.2, w_1=0.2, w_2=0.6,
                  w_cb=0.01, d_cb=0.0, show=True, plot_args=['k', 'r', 'b'],
-                 ylim=0., clim=0., cmap='YlGnBu_r'):
+                 ylim=0., clim=0., cmap=obspy_sequential):
     """
     Plot all time frequency Goodness-of-Fits and the time series in one plot
     (per component).
@@ -1382,7 +1383,7 @@ def plot_tf_gofs(st1, st2, dt=0.01, t0=0., fmin=1., fmax=10., nf=100, w0=6,
 def plot_tfr(st, dt=0.01, t0=0., fmin=1., fmax=10., nf=100, w0=6, left=0.1,
              bottom=0.1, h_1=0.2, h_2=0.6, w_1=0.2, w_2=0.6, w_cb=0.01,
              d_cb=0.0, show=True, plot_args=['k', 'k'], clim=0.0,
-             cmap='YlGnBu_r', mode='absolute', fft_zero_pad_fac=0):
+             cmap=obspy_sequential, mode='absolute', fft_zero_pad_fac=0):
     """
     Plot time frequency representation, spectrum and time series of the signal.
 

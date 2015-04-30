@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from scipy.cluster import hierarchy
 from scipy.spatial import distance
 
+from obspy.imaging.cm import obspy_sequential
+
 
 url = "http://examples.obspy.org/dissimilarities.npz"
 with io.BytesIO(urllib.urlopen(url).read()) as fh:
@@ -13,7 +15,7 @@ with io.BytesIO(urllib.urlopen(url).read()) as fh:
         dissimilarity = data['dissimilarity']
 
 plt.subplot(121)
-plt.imshow(1 - dissimilarity, interpolation='nearest', cmap='YlGnBu_r')
+plt.imshow(1 - dissimilarity, interpolation='nearest', cmap=obspy_sequential)
 
 dissimilarity = distance.squareform(dissimilarity)
 threshold = 0.3

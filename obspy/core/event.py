@@ -55,6 +55,7 @@ from obspy.core.util import AttribDict, NamedTemporaryFile, _read_from_plugin
 from obspy.core.util.base import ENTRY_POINTS
 from obspy.core.util.decorator import (deprecated, map_example_filename,
                                        uncompress_file)
+from obspy.imaging.cm import obspy_sequential
 
 
 EVENT_ENTRY_POINTS = ENTRY_POINTS['event']
@@ -3358,7 +3359,7 @@ class Catalog(object):
 
         # Create the colormap for date based plotting.
         if colormap is None:
-            colormap = plt.get_cmap("YlGnBu_r")
+            colormap = obspy_sequential
 
         if len(lons) > 1:
             title = (
