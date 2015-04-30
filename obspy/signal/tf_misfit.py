@@ -24,7 +24,7 @@ from future.builtins import *  # NOQA
 
 import numpy as np
 
-from obspy.imaging.cm import obspy_sequential
+from obspy.imaging.cm import obspy_sequential, obspy_divergent
 from obspy.signal import util
 
 
@@ -856,7 +856,7 @@ def plot_tf_misfits(st1, st2, dt=0.01, t0=0., fmin=1., fmax=10., nf=100, w0=6,
                     norm='global', st2_isref=True, left=0.1, bottom=0.1,
                     h_1=0.2, h_2=0.125, h_3=0.2, w_1=0.2, w_2=0.6, w_cb=0.01,
                     d_cb=0.0, show=True, plot_args=['k', 'r', 'b'], ylim=0.,
-                    clim=0., cmap='RdYlBu_r'):
+                    clim=0., cmap=obspy_divergent):
     """
     Plot all time frequency misfits and the time series in one plot (per
     component).

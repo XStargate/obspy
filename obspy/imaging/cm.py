@@ -16,6 +16,7 @@ import inspect
 import os
 
 import numpy as np
+from matplotlib.cm import get_cmap
 from matplotlib.colors import LinearSegmentedColormap
 
 
@@ -42,6 +43,7 @@ def _get_cmap(name):
 
 obspy_BuGnYl = _get_cmap("obspy_BuGnYl")
 obspy_sequential = obspy_BuGnYl
+obspy_divergent = get_cmap("RdYlBu_r")
 
 
 if __name__ == '__main__':
